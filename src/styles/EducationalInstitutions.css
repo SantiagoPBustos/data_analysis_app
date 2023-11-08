@@ -1,0 +1,263 @@
+body {
+    background-color: #F8F9FA;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Asegura que el cuerpo de la página ocupe al menos el alto de la ventana. */
+    margin: 0;
+}
+
+.principal-container {
+    width: 100%;
+    padding: 0.4em;
+    background-color: #DADADA;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.main-content {
+    opacity: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.main-content h4 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.btn-logo {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.container-file-reader {
+    width: 100%;
+    height: 260px;
+    background-color: #F5F5F5;
+    text-align: center;
+    padding: 0.5em;
+    border-bottom: 2px #DADADA solid;
+}
+
+.form-file-reader {
+    width: 60%;
+    margin: auto;
+}
+
+.form-label {
+    margin-bottom: 0px;
+}
+
+.form-control {
+    width: 70%;
+    display: inline-block;
+}
+
+.btn-load-data {
+    margin-left: 5%;
+    display: inline-block;
+    background-color: #64AE58;
+    color: white;
+    border: none;
+    padding: 7px 20px;
+    border-radius: 5px;
+}
+
+.btn-modal {
+    display: inline-block;
+    background-color: #64AE58;
+    color: white;
+    border: none;
+    padding: 7px 20px;
+    border-radius: 5px;
+}
+
+
+.card-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.card {
+    border: 1px solid #DADADA;
+    padding: 5px;
+    text-align: center;
+    width: calc(17% - 20px);
+    border-radius: 0px;
+    font-size: 0.9rem;
+}
+
+.highcharts-contextmenu {
+    position: absolute !important;
+    right: 10px;
+    top: 10px;
+    z-index: 1000;
+}
+
+.container-graphics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.graphicResponsive {
+    width: calc(49% - 10px);
+    margin: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #DADADA;
+}
+
+.loading-spinner {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 5px;
+    background-color: #DADADA;
+}
+
+.container-footer p {
+    margin: 0;
+    font-weight: 600;
+}
+
+@media screen and (width <=479px) {
+    .container-file-reader {
+        height: 340px;
+    }
+
+    .form-file-reader {
+        width: 100%;
+        margin: auto;
+    }
+
+    .form-control {
+        width: 100%;
+    }
+
+    .btn-load-data {
+        margin-top: 15px;
+    }
+
+    .graphicResponsive {
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 5px 50px;
+    }
+
+    .main-content h4 {
+        top: 70%;
+    }
+}
+
+@media screen and (width >=480px) and (width <=599px) {
+    .container-file-reader {
+        height: 280px;
+    }
+
+    .form-file-reader {
+        width: 90%;
+        margin: auto;
+    }
+
+    .form-control {
+        width: 65%;
+    }
+
+    .btn-load-data {
+        margin-left: 2%;
+    }
+
+    .graphicResponsive {
+        width: 100%;
+    }
+
+    .card {
+        width: calc(49% - 10px);
+        margin-bottom: 10px;
+    }
+
+    .main-content h4 {
+        top: 70%;
+    }
+}
+
+@media screen and (width >=600px) and (width <=799px) {
+    .container-file-reader {
+        height: 230px;
+    }
+
+    .form-file-reader {
+        width: 100%;
+        margin: auto;
+    }
+
+    .form-control {
+        width: 50%;
+    }
+
+    .graphicResponsive {
+        width: 100%;
+    }
+
+    .card {
+        width: calc(49% - 10px);
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (width >=800px) and (width <=1023px) {
+    .container-file-reader {
+        height: 210px;
+    }
+
+    .form-file-reader {
+        width: 80%;
+        margin: auto;
+    }
+
+    .graphicResponsive {
+        width: 100%;
+    }
+
+    .card {
+        width: calc(49% - 10px);
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (width >=1024px) {
+    .container-file-reader {
+        height: 210px;
+    }
+}
