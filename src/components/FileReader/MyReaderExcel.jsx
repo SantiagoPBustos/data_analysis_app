@@ -6,7 +6,7 @@ import { httpRequest } from "../../services/HttpRequests";
 import Modal from "../GraphicsComponents/Modal";
 import { principalContext } from "../../context/principalContext";
 import { Oval } from "react-loader-spinner";
-import { environmentDev } from "../../venv/venviroment.dev";
+import { environment } from "../../venv/venviroment.prod";
 import * as XLSX from "xlsx";
 
 function MyReaderExcel() {
@@ -59,7 +59,7 @@ function MyReaderExcel() {
 
   const postData = (dataToSend) => {
     handleSaveData(dataToSend);
-    const endpoint = `${environmentDev.endpoint}postData/`;
+    const endpoint = `${environment.endpointProduction}postData/`;
 
     const options = {
       method: "POST",

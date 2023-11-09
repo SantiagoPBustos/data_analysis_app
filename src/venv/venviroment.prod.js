@@ -1,5 +1,5 @@
-export const environmentDev = {
+export const environment = {
   production: true,
-  endpoint:
+  endpointProduction:
     "https://secretaria-salud-analisis-datos-backend.onrender.com/api/postData/",
 };
