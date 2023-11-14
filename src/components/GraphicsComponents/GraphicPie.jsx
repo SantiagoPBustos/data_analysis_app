@@ -12,9 +12,7 @@ function GraphicPie({ titleGraphic, descriptionGraphic, dataGraphic }) {
 
   const options = {
     colors: ["#3664aa", "#97bdf5"],
-    chart: {
-      type: "pie",
-    },
+    chart: { type: "pie" },
     title: {
       text: `${titleGraphic}`,
       align: "center",
@@ -24,14 +22,9 @@ function GraphicPie({ titleGraphic, descriptionGraphic, dataGraphic }) {
       align: "center",
     },
     accessibility: {
-      announceNewData: {
-        enabled: true,
-      },
-      point: {
-        valueSuffix: "%",
-      },
+      announceNewData: { enabled: true },
+      point: { valueSuffix: "%" },
     },
-
     plotOptions: {
       series: {
         borderRadius: 0,
@@ -41,13 +34,11 @@ function GraphicPie({ titleGraphic, descriptionGraphic, dataGraphic }) {
         },
       },
     },
-
     tooltip: {
       headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
       pointFormat:
         '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>',
     },
-
     series: [
       {
         name: "Categoria",
@@ -56,12 +47,10 @@ function GraphicPie({ titleGraphic, descriptionGraphic, dataGraphic }) {
       },
     ],
   };
-
   return (
     <div className="graphicResponsive">
       <HighchartsReact highcharts={Highcharts} options={options} />
     </div>
   );
 }
-
 export default GraphicPie;
