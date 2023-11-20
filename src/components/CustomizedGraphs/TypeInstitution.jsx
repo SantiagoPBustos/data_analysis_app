@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { principalContext } from "../../context/principalContext";
 import GraphicBarHorizontal from "../GraphicsComponents/GraphicBarHorizontal";
 import { colorGraphicGreen } from "../../utils/Utilities";
-import Modal from "../GraphicsComponents/Modal";
+import ModalGraphic from "./ModalGraphic";
 
 const TypeInstitution = () => {
   const titleTypeInstitution = "Tipo de Institucion";
@@ -22,13 +22,7 @@ const TypeInstitution = () => {
           isModal={false}
         />
       </div>
-      <Modal state={stateModalGraphic} changeState={changeStateModal}>
-        <GraphicBarHorizontal
-          titleGraphic={cityModal}
-          dataGraphic={datasTypeInstitutions}
-          isModal={true}
-        />
-      </Modal>
+      <ModalGraphic />
     </>
   );
 };

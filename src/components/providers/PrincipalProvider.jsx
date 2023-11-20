@@ -4,6 +4,8 @@ import { principalContext } from "../../context/principalContext";
 const PrincipalProvider = ({ children }) => {
   const [totalData, setTotalData] = useState(null);
   const [cityModal, setCityModal] = useState(null);
+  const [descriptionModal, setDescriptionModal] = useState(null);
+  const [dataModal, setDataModal] = useState(null);
   const [totalInstitutions, setTotalInstitutions] = useState("");
   const [educationInstitutions, setEducationInstitutions] = useState("");
   const [totalChilhood, setTotalChilhood] = useState("");
@@ -98,6 +100,10 @@ const PrincipalProvider = ({ children }) => {
     <principalContext.Provider
       value={{
         totalData,
+        descriptionModal,
+        setDescriptionModal,
+        dataModal,
+        setDataModal,
         stateModalGraphic,
         datasConditionsOfSanitation,
         datasLaboratoryConditions,

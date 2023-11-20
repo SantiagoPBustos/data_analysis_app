@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { principalContext } from "../../context/principalContext";
 import GraphicBarHorizontal from "../GraphicsComponents/GraphicBarHorizontal";
 import { colorGraphicBlue } from "../../utils/Utilities";
-import Modal from "../GraphicsComponents/Modal";
+import ModalGraphic from "./ModalGraphic";
 
 const RiskManagementConditions = () => {
   const titleLocationConditions =
@@ -23,13 +23,7 @@ const RiskManagementConditions = () => {
           isModal={false}
         ></GraphicBarHorizontal>
       </div>
-      <Modal state={stateModalGraphic} changeState={changeStateModal}>
-        <GraphicBarHorizontal
-          titleGraphic={cityModal}
-          dataGraphic={datasRiskManagementConditions}
-          isModal={true}
-        />
-      </Modal>
+      <ModalGraphic />
     </>
   );
 };

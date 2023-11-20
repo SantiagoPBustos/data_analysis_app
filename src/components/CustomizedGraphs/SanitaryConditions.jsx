@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
 import GraphicBarVertical from "../GraphicsComponents/GraphicBarVertical";
-import GraphicBarHorizontal from "../GraphicsComponents/GraphicBarHorizontal";
 import { principalContext } from "../../context/principalContext";
 import { colorGraphicGreen } from "../../utils/Utilities";
-import Modal from "../GraphicsComponents/Modal";
+import ModalGraphic from "./ModalGraphic";
 
 const SanitaryConditions = () => {
   const titleSanitaryConditions = "Condiciones Sanitarias por Municipio";
@@ -24,13 +23,7 @@ const SanitaryConditions = () => {
           isModal={false}
         />
       </div>
-      <Modal state={stateModalGraphic} changeState={changeStateModal}>
-        <GraphicBarHorizontal
-          titleGraphic={cityModal}
-          dataGraphic={datasSanitaryConditions}
-          isModal={true}
-        />
-      </Modal>
+      <ModalGraphic />
     </>
   );
 };

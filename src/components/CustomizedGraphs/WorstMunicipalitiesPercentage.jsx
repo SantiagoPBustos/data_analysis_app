@@ -1,14 +1,15 @@
 import React, { useContext } from "react";
 import GraphicBarVertical from "../GraphicsComponents/GraphicBarVertical";
-import GraphicBarHorizontal from "../GraphicsComponents/GraphicBarHorizontal";
 import { principalContext } from "../../context/principalContext";
 import { colorGraphicBlue } from "../../utils/Utilities";
-import Modal from "../GraphicsComponents/Modal";
+import ModalGraphic from "./ModalGraphic";
 
 const WorstMunicipalitiesPercentage = () => {
   const titleWorstMunicipalities = "Porcentaje de Cumplimiento por Municipio";
   const descriptionWorstMunicipalities =
     "Promedio de Porcentaje de Cumplimiento Agrupado por Municipio";
+  const descriptionModal =
+    "Peores Promedios de Porcentaje de Cumplimiento Total de Acta IVC";
   const { stateModalGraphic, changeStateModal, cityModal } =
     useContext(principalContext);
   const { datasWorstMunicipalities } = useContext(principalContext);
@@ -24,13 +25,7 @@ const WorstMunicipalitiesPercentage = () => {
           isModal={false}
         />
       </div>
-      <Modal state={stateModalGraphic} changeState={changeStateModal}>
-        <GraphicBarHorizontal
-          titleGraphic={cityModal}
-          dataGraphic={datasWorstMunicipalities}
-          isModal={true}
-        />
-      </Modal>
+      <ModalGraphic />
     </>
   );
 };
