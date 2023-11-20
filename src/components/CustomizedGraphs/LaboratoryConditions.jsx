@@ -27,7 +27,6 @@ const LaboratoryConditions = () => {
         <GraphicBarHorizontal
           titleGraphic={cityModal}
           dataGraphic={datasLaboratoryConditions}
-          colorGraphic={colorGraphicBlue}
           isModal={true}
         />
       </Modal>

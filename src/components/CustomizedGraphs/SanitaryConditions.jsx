@@ -28,7 +28,6 @@ const SanitaryConditions = () => {
         <GraphicBarHorizontal
           titleGraphic={cityModal}
           dataGraphic={datasSanitaryConditions}
-          colorGraphic={colorGraphicGreen}
           isModal={true}
         />
       </Modal>

@@ -4,6 +4,7 @@ import HighchartsReact from "highcharts-react-official";
 import exporting from "highcharts/modules/exporting";
 import accessibility from "highcharts/modules/accessibility";
 import { principalContext } from "../../context/principalContext";
+import { colorGraphicBlue } from "../../utils/Utilities";
 
 exporting(Highcharts);
 accessibility(Highcharts);
@@ -12,7 +13,7 @@ function GraphicBarHorizontal({
   titleGraphic,
   descriptionGraphic,
   datasGraphic,
-  colorGraphic = [],
+  colorGraphic = { colorGraphicBlue },
   isModal,
 }) {
   const { changeStateModal, handleCityModal } = useContext(principalContext);

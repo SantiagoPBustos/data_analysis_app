@@ -28,7 +28,6 @@ const WorstMunicipalitiesPercentage = () => {
         <GraphicBarHorizontal
           titleGraphic={cityModal}
           dataGraphic={datasWorstMunicipalities}
-          colorGraphic={colorGraphicBlue}
           isModal={true}
         />
       </Modal>

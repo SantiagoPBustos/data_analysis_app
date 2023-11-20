@@ -27,7 +27,6 @@ const LocationConditions = () => {
         <GraphicBarHorizontal
           titleGraphic={cityModal}
           dataGraphic={datasLocationConditions}
-          colorGraphic={colorGraphicBlue}
           isModal={true}
         />
       </Modal>

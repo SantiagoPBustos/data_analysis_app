@@ -27,7 +27,6 @@ const RiskManagementConditions = () => {
         <GraphicBarHorizontal
           titleGraphic={cityModal}
           dataGraphic={datasRiskManagementConditions}
-          colorGraphic={colorGraphicBlue}
           isModal={true}
         />
       </Modal>

@@ -26,7 +26,6 @@ const TypeInstitution = () => {
         <GraphicBarHorizontal
           titleGraphic={cityModal}
           dataGraphic={datasTypeInstitutions}
-          colorGraphic={colorGraphicGreen}
           isModal={true}
         />
       </Modal>
