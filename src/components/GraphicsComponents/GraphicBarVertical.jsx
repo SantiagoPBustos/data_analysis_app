@@ -11,7 +11,7 @@ function GraphicBarVertical({
   descriptionGraphic,
   colorGraphic = [],
 }) {
-  const { changeStateModal } = useContext(principalContext);
+  const { changeStateModal, handleCityModal } = useContext(principalContext);
   useEffect(() => {
     accessibility(Highcharts);
     exporting(Highcharts);
@@ -58,8 +58,8 @@ function GraphicBarVertical({
         point: {
           events: {
             click: function () {
-              console.log(`Clic en ${this.name}`);
               console.log(`Nombre: ${titleGraphic}`);
+              handleCityModal(this.name);
               changeStateModal(true);
               // Debes generar el gráfico category aquí
               // Puedes utilizar el estado de tu componente o una función para renderizarlo.

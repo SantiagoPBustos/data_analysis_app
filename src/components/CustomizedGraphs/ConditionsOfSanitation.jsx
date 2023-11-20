@@ -5,7 +5,8 @@ import { colorGraphicGreen } from "../../utils/Utilities";
 import Modal from "../GraphicsComponents/Modal";
 
 const ConditionsOfSanitation = () => {
-  const { stateModalGraphic, changeStateModal } = useContext(principalContext);
+  const { stateModalGraphic, changeStateModal, cityModal } =
+    useContext(principalContext);
 
   const titleConditionsOfSanitation =
     "Condiciones de Saneamiento por Municipio";
@@ -23,7 +24,7 @@ const ConditionsOfSanitation = () => {
         colorGraphic={colorGraphicGreen}
       />
       <Modal state={stateModalGraphic} changeState={changeStateModal}>
-        <h3>Grafico de barras</h3>
+        <h3>{cityModal}</h3>
         <br />
         <p>
           El archivo cargado no corresponde a un documento de Excel

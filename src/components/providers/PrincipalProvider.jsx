@@ -27,6 +27,10 @@ const PrincipalProvider = ({ children }) => {
   const [datasWorstMunicipalities, setDatasWorstMunicipalities] =
     useState(null);
 
+  const handleCityModal = (city) => {
+    setCityModal(city);
+  };
+
   const changeStateModal = (value) => {
     setStateModalGraphic(value);
   };
@@ -129,6 +133,8 @@ const PrincipalProvider = ({ children }) => {
         handleLoadingState,
         handleSaveData,
         changeStateModal,
+        cityModal,
+        handleCityModal,
       }}
     >
       {children}
