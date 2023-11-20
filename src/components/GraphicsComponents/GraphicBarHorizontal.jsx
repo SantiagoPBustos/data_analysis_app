@@ -1,8 +1,9 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import exporting from "highcharts/modules/exporting";
 import accessibility from "highcharts/modules/accessibility";
+import { principalContext } from "../../context/principalContext";
 
 exporting(Highcharts);
 accessibility(Highcharts);
@@ -12,7 +13,10 @@ function GraphicBarHorizontal({
   descriptionGraphic,
   datasGraphic,
   colorGraphic = [],
+  isModal,
 }) {
+  const { changeStateModal, handleCityModal } = useContext(principalContext);
+
   useEffect(() => {
     accessibility(Highcharts);
     exporting(Highcharts);
@@ -53,10 +57,11 @@ function GraphicBarHorizontal({
         point: {
           events: {
             click: function () {
-              console.log(`Clic en ${this.name}`);
-              console.log(`Nombre: ${titleGraphic}`);
-
-              changeStateModal(true);
+              if (!isModal) {
+                console.log(`Nombre: ${titleGraphic}`);
+                handleCityModal(this.name);
+                changeStateModal(true);
+              }
 
               // Debes generar el gráfico category aquí
               // Puedes utilizar el estado de tu componente o una función para renderizarlo.

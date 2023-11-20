@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import GraphicBarVertical from "../GraphicsComponents/GraphicBarVertical";
+import GraphicBarHorizontal from "../GraphicsComponents/GraphicBarHorizontal";
 import { principalContext } from "../../context/principalContext";
 import { colorGraphicGreen } from "../../utils/Utilities";
 import Modal from "../GraphicsComponents/Modal";
@@ -27,9 +28,8 @@ const ConditionsOfSanitation = () => {
         />
       </div>
       <Modal state={stateModalGraphic} changeState={changeStateModal}>
-        <GraphicBarVertical
+        <GraphicBarHorizontal
           titleGraphic={cityModal}
-          descriptionGraphic={descriptionConditionsOfSanitation}
           dataGraphic={datasConditionsOfSanitation}
           colorGraphic={colorGraphicGreen}
           isModal={true}
