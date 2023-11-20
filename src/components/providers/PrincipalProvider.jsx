@@ -3,6 +3,7 @@ import { principalContext } from "../../context/principalContext";
 
 const PrincipalProvider = ({ children }) => {
   const [totalData, setTotalData] = useState(null);
+  const [cityModal, setCityModal] = useState(null);
   const [totalInstitutions, setTotalInstitutions] = useState("");
   const [educationInstitutions, setEducationInstitutions] = useState("");
   const [totalChilhood, setTotalChilhood] = useState("");
