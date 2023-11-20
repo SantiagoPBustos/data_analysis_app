@@ -14,6 +14,7 @@ const PrincipalProvider = ({ children }) => {
   const [datasSanitaryConditions, setDatasSanitaryConditions] = useState(null);
   const [datasTypeInstitutions, setDatasTypeInstitutions] = useState(null);
   const [dataTypeConceptSanitary, setDataTypeConceptSanitary] = useState(null);
+  const [stateModalGraphic, setStateModalGraphic] = useState(false);
   const [datasConditionsOfSanitation, setDatasConditionsOfSanitation] =
     useState(null);
   const [superiorEducationInstitutions, setSuperiorEducationInstitutions] =
@@ -24,6 +25,10 @@ const PrincipalProvider = ({ children }) => {
     useState(null);
   const [datasWorstMunicipalities, setDatasWorstMunicipalities] =
     useState(null);
+
+  const changeStateModal = (value) => {
+    setStateModalGraphic(value);
+  };
 
   const handleSaveData = (data) => {
     setTotalData(data);
@@ -88,6 +93,7 @@ const PrincipalProvider = ({ children }) => {
     <principalContext.Provider
       value={{
         totalData,
+        stateModalGraphic,
         datasConditionsOfSanitation,
         datasLaboratoryConditions,
         datasLocationConditions,
@@ -121,6 +127,7 @@ const PrincipalProvider = ({ children }) => {
         handleDataLoading,
         handleLoadingState,
         handleSaveData,
+        changeStateModal,
       }}
     >
       {children}

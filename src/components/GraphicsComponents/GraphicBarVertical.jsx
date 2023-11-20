@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import exporting from "highcharts/modules/exporting";
 import accessibility from "highcharts/modules/accessibility";
+import { principalContext } from "../../context/principalContext";
 
 function GraphicBarVertical({
   titleGraphic,
@@ -10,6 +11,7 @@ function GraphicBarVertical({
   descriptionGraphic,
   colorGraphic = [],
 }) {
+  const { changeStateModal } = useContext(principalContext);
   useEffect(() => {
     accessibility(Highcharts);
     exporting(Highcharts);
@@ -58,6 +60,7 @@ function GraphicBarVertical({
             click: function () {
               console.log(`Clic en ${this.name}`);
               console.log(`Nombre: ${titleGraphic}`);
+              changeStateModal(true);
               // Debes generar el gráfico category aquí
               // Puedes utilizar el estado de tu componente o una función para renderizarlo.
             },
