@@ -55,6 +55,7 @@ function GraphicBarHorizontal({
             click: function () {
               console.log(`Clic en ${this.name}`);
               console.log(`Nombre: ${titleGraphic}`);
+
               // Debes generar el gráfico category aquí
               // Puedes utilizar el estado de tu componente o una función para renderizarlo.
             },
@@ -72,13 +73,34 @@ function GraphicBarHorizontal({
   };
 
   return (
-    <div className="graphicResponsive">
-      <HighchartsReact
-        style="highcharts-contextmenu"
-        options={options}
-        highcharts={Highcharts}
-      />
-    </div>
+    <>
+      <div className="graphicResponsive">
+        <HighchartsReact
+          style="highcharts-contextmenu"
+          options={options}
+          highcharts={Highcharts}
+        />
+      </div>
+      <Modal state={stateModal} changeState={setStateModal}>
+        <h3>Archivo Cargado Invalido</h3>
+        <br />
+        <p>
+          El archivo cargado no corresponde a un documento de Excel
+          <br />
+          Intente nuevamente cargando el formato indicado.
+        </p>
+        <br />
+        <button
+          className="btn-modal"
+          onClick={() => {
+            setStateModal(false);
+            handleLoadingState(false);
+          }}
+        >
+          Aceptar
+        </button>
+      </Modal>
+    </>
   );
 }
 
