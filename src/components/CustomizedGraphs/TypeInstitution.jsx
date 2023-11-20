@@ -10,12 +10,14 @@ const TypeInstitution = () => {
   const { datasTypeInstitutions } = useContext(principalContext);
 
   return (
-    <GraphicBarHorizontal
-      titleGraphic={titleTypeInstitution}
-      descriptionGraphic={descriptionTypeInstitution}
-      datasGraphic={datasTypeInstitutions}
-      colorGraphic={colorGraphicGreen}
-    />
+    <div className="graphicResponsive">
+      <GraphicBarHorizontal
+        titleGraphic={titleTypeInstitution}
+        descriptionGraphic={descriptionTypeInstitution}
+        datasGraphic={datasTypeInstitutions}
+        colorGraphic={colorGraphicGreen}
+      />
+    </div>
   );
 };
 

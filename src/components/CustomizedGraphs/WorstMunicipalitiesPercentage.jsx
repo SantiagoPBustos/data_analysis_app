@@ -11,12 +11,14 @@ const WorstMunicipalitiesPercentage = () => {
   const { datasWorstMunicipalities } = useContext(principalContext);
 
   return (
-    <GraphicBarVertical
-      titleGraphic={titleWorstMunicipalities}
-      descriptionGraphic={descriptionWorstMunicipalities}
-      dataGraphic={datasWorstMunicipalities}
-      colorGraphic={colorGraphicBlue}
-    />
+    <div className="graphicResponsive">
+      <GraphicBarVertical
+        titleGraphic={titleWorstMunicipalities}
+        descriptionGraphic={descriptionWorstMunicipalities}
+        dataGraphic={datasWorstMunicipalities}
+        colorGraphic={colorGraphicBlue}
+      />
+    </div>
   );
 };
 

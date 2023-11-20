@@ -10,11 +10,13 @@ const TypeSanitaryConcept = () => {
   const { dataTypeConceptSanitary } = useContext(principalContext);
 
   return (
-    <GraphicPie
-      titleGraphic={titleTypeConceptSanitary}
-      descriptionGraphic={descriptionTypeConceptSanitary}
-      dataGraphic={dataTypeConceptSanitary}
-    />
+    <div className="graphicResponsive">
+      <GraphicPie
+        titleGraphic={titleTypeConceptSanitary}
+        descriptionGraphic={descriptionTypeConceptSanitary}
+        dataGraphic={dataTypeConceptSanitary}
+      />
+    </div>
   );
 };
 

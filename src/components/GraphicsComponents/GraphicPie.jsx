@@ -47,10 +47,6 @@ function GraphicPie({ titleGraphic, descriptionGraphic, dataGraphic }) {
       },
     ],
   };
-  return (
-    <div className="graphicResponsive">
-      <HighchartsReact highcharts={Highcharts} options={options} />
-    </div>
-  );
+  return <HighchartsReact highcharts={Highcharts} options={options} />;
 }
 export default GraphicPie;

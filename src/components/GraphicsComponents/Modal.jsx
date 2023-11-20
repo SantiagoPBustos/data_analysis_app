@@ -38,8 +38,6 @@ const Overlay = styled.div`
 `;
 
 const ContainerModal = styled.div`
-  width: auto;
-  min-height: 100px;
   background: #fff;
   position: relative;
   border-radius: 5px;

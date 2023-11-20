@@ -11,12 +11,14 @@ const RiskManagementConditions = () => {
 
   const { datasRiskManagementConditions } = useContext(principalContext);
   return (
-    <GraphicBarHorizontal
-      datasGraphic={datasRiskManagementConditions}
-      descriptionGraphic={descriptionLocationConditions}
-      titleGraphic={titleLocationConditions}
-      colorGraphic={colorGraphicBlue}
-    ></GraphicBarHorizontal>
+    <div className="graphicResponsive">
+      <GraphicBarHorizontal
+        datasGraphic={datasRiskManagementConditions}
+        descriptionGraphic={descriptionLocationConditions}
+        titleGraphic={titleLocationConditions}
+        colorGraphic={colorGraphicBlue}
+      ></GraphicBarHorizontal>
+    </div>
   );
 };
 

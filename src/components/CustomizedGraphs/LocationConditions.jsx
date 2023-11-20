@@ -10,12 +10,14 @@ const LocationConditions = () => {
 
   const { datasLocationConditions } = useContext(principalContext);
   return (
-    <GraphicBarHorizontal
-      datasGraphic={datasLocationConditions}
-      descriptionGraphic={descriptionLocationConditions}
-      titleGraphic={titleLocationConditions}
-      colorGraphic={colorGraphicBlue}
-    ></GraphicBarHorizontal>
+    <div className="graphicResponsive">
+      <GraphicBarHorizontal
+        datasGraphic={datasLocationConditions}
+        descriptionGraphic={descriptionLocationConditions}
+        titleGraphic={titleLocationConditions}
+        colorGraphic={colorGraphicBlue}
+      ></GraphicBarHorizontal>
+    </div>
   );
 };
 

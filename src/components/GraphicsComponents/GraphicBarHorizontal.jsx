@@ -13,7 +13,6 @@ function GraphicBarHorizontal({
   datasGraphic,
   colorGraphic = [],
 }) {
-  
   useEffect(() => {
     accessibility(Highcharts);
     exporting(Highcharts);
@@ -77,13 +76,11 @@ function GraphicBarHorizontal({
 
   return (
     <>
-      <div className="graphicResponsive">
-        <HighchartsReact
-          style="highcharts-contextmenu"
-          options={options}
-          highcharts={Highcharts}
-        />
-      </div>
+      <HighchartsReact
+        style="highcharts-contextmenu"
+        options={options}
+        highcharts={Highcharts}
+      />
     </>
   );
 }

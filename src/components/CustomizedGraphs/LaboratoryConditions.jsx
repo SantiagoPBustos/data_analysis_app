@@ -11,12 +11,14 @@ const LaboratoryConditions = () => {
   const { datasLaboratoryConditions } = useContext(principalContext);
 
   return (
-    <GraphicBarHorizontal
-      titleGraphic={titleLaboratoryConditions}
-      descriptionGraphic={descriptionLaboratoryConditions}
-      datasGraphic={datasLaboratoryConditions}
-      colorGraphic={colorGraphicBlue}
-    ></GraphicBarHorizontal>
+    <div className="graphicResponsive">
+      <GraphicBarHorizontal
+        titleGraphic={titleLaboratoryConditions}
+        descriptionGraphic={descriptionLaboratoryConditions}
+        datasGraphic={datasLaboratoryConditions}
+        colorGraphic={colorGraphicBlue}
+      ></GraphicBarHorizontal>
+    </div>
   );
 };
 

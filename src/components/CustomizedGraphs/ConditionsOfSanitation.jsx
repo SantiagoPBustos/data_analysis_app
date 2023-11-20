@@ -17,20 +17,23 @@ const ConditionsOfSanitation = () => {
 
   return (
     <>
-      <GraphicBarVertical
-        titleGraphic={titleConditionsOfSanitation}
-        descriptionGraphic={descriptionConditionsOfSanitation}
-        dataGraphic={datasConditionsOfSanitation}
-        colorGraphic={colorGraphicGreen}
-      />
+      <div className="graphicResponsive">
+        <GraphicBarVertical
+          titleGraphic={titleConditionsOfSanitation}
+          descriptionGraphic={descriptionConditionsOfSanitation}
+          dataGraphic={datasConditionsOfSanitation}
+          colorGraphic={colorGraphicGreen}
+          isModal={false}
+        />
+      </div>
       <Modal state={stateModalGraphic} changeState={changeStateModal}>
-        <h3>{cityModal}</h3>
-        <br />
-        <p>
-          El archivo cargado no corresponde a un documento de Excel
-          <br />
-          Intente nuevamente cargando el formato indicado.
-        </p>
+        <GraphicBarVertical
+          titleGraphic={cityModal}
+          descriptionGraphic={descriptionConditionsOfSanitation}
+          dataGraphic={datasConditionsOfSanitation}
+          colorGraphic={colorGraphicGreen}
+          isModal={true}
+        />
       </Modal>
     </>
   );

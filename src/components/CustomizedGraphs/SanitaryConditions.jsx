@@ -11,12 +11,14 @@ const SanitaryConditions = () => {
   const { datasSanitaryConditions } = useContext(principalContext);
 
   return (
-    <GraphicBarVertical
-      titleGraphic={titleSanitaryConditions}
-      descriptionGraphic={descriptionSanitaryConditions}
-      dataGraphic={datasSanitaryConditions}
-      colorGraphic={colorGraphicGreen}
-    />
+    <div className="graphicResponsive">
+      <GraphicBarVertical
+        titleGraphic={titleSanitaryConditions}
+        descriptionGraphic={descriptionSanitaryConditions}
+        dataGraphic={datasSanitaryConditions}
+        colorGraphic={colorGraphicGreen}
+      />
+    </div>
   );
 };
 
