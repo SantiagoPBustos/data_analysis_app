@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import exporting from "highcharts/modules/exporting";
@@ -14,6 +14,7 @@ function GraphicBarHorizontal({
   datasGraphic,
   colorGraphic = [],
 }) {
+  const [stateModalGraphic, setStateModalGraphic] = useState(true);
   useEffect(() => {
     accessibility(Highcharts);
     exporting(Highcharts);
@@ -82,29 +83,25 @@ function GraphicBarHorizontal({
           highcharts={Highcharts}
         />
       </div>
-      {true ? (
-        <Modal state={stateModal} changeState={setStateModal}>
-          <h3>Archivo Cargado Invalido</h3>
+      <Modal state={stateModalGraphic} changeState={setStateModalGraphic}>
+        <h3>Archivo Cargado Invalido</h3>
+        <br />
+        <p>
+          El archivo cargado no corresponde a un documento de Excel
           <br />
-          <p>
-            El archivo cargado no corresponde a un documento de Excel
-            <br />
-            Intente nuevamente cargando el formato indicado.
-          </p>
-          <br />
-          <button
-            className="btn-modal"
-            onClick={() => {
-              setStateModal(false);
-              handleLoadingState(false);
-            }}
-          >
-            Aceptar
-          </button>
-        </Modal>
-      ) : (
-        <></>
-      )}
+          Intente nuevamente cargando el formato indicado.
+        </p>
+        <br />
+        <button
+          className="btn-modal"
+          onClick={() => {
+            setStateModal(false);
+            handleLoadingState(false);
+          }}
+        >
+          Aceptar
+        </button>
+      </Modal>
     </>
   );
 }
