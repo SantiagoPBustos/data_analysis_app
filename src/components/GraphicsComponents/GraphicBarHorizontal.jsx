@@ -70,9 +70,9 @@ function GraphicBarHorizontal({
             click: function () {
               if (!isModal) {
                 handleLoadingState(true);
-
                 const endpoint = `${environment.endpointProduction}dataInstitution/`;
 
+                console.log(totalData);
                 const options = {
                   method: "POST",
                   headers: {
