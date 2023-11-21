@@ -70,9 +70,7 @@ function GraphicBarHorizontal({
             click: function () {
               if (!isModal) {
                 handleLoadingState(true);
-                const endpoint = `${environment.endpointProduction}dataInstitution/`;
-
-                console.log(totalData);
+                const endpoint = `${environment.endpointProduction}dataInstitution/municipio?=${this.name}`;
                 const options = {
                   method: "POST",
                   headers: {
@@ -83,7 +81,6 @@ function GraphicBarHorizontal({
 
                 httpRequest(endpoint, options)
                   .then((response) => {
-                    console.log(response);
                     if (response.status === 200) {
                       handleCityModal(this.name);
                       handleDescriptionModal(descriptionModalGraphic);

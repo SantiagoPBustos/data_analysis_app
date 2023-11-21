@@ -59,18 +59,18 @@ function MyReaderExcel() {
 
   const postData = (dataToSend) => {
     handleSaveData(dataToSend);
+    console.log(JSON.stringify(dataToSend));
     const endpoint = `${environment.endpointProduction}postData/`;
 
     const options = {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",   
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(dataToSend),
     };
     httpRequest(endpoint, options)
       .then((response) => {
-        console.log(response);
         if (response.status === 200) {
           handleChangeInstitutions(response.total);
           handleEducationInstitutions(response.total_IE);
