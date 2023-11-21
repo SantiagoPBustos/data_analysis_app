@@ -84,6 +84,7 @@ function GraphicBarHorizontal({
 
                 httpRequest(endpoint, options)
                   .then((response) => {
+                    console.log(response);
                     if (response.status === 200) {
                       handleCityModal(this.name);
                       handleDescriptionModal(descriptionModalGraphic);
