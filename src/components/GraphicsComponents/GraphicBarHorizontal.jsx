@@ -14,6 +14,7 @@ accessibility(Highcharts);
 function GraphicBarHorizontal({
   titleGraphic,
   descriptionGraphic,
+  descriptionModalGraphic,
   datasGraphic = [],
   colorGraphic = colorGraphicBlue,
   isModal,
@@ -85,7 +86,7 @@ function GraphicBarHorizontal({
                     console.log(response);
                     if (response.status === 200) {
                       handleCityModal(this.name);
-                      handleDescriptionModal(descriptionGraphic);
+                      handleDescriptionModal(descriptionModalGraphic);
                       handleDataModal(response.data);
                       changeStateModal(true);
                     }

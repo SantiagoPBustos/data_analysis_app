@@ -8,15 +8,16 @@ const LocationConditions = () => {
   const titleLocationConditions = "Condiciones Locativas por Municipio";
   const descriptionLocationConditions =
     "Promedio de Porcentaje de Cumplimiento de Condiciones Locativas Agrupado por Municipio";
-
   const { datasLocationConditions } = useContext(principalContext);
-
+  const descriptionModal =
+    "Instituciones con porcentaje de cumplimiento de condiciones locativas mas bajos";
   return (
     <>
       <div className="graphicResponsive">
         <GraphicBarHorizontal
           datasGraphic={datasLocationConditions}
           descriptionGraphic={descriptionLocationConditions}
+          descriptionModalGraphic={descriptionModal}
           titleGraphic={titleLocationConditions}
           colorGraphic={colorGraphicBlue}
           isModal={false}

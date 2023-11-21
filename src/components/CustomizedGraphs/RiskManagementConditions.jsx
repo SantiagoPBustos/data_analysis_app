@@ -10,13 +10,15 @@ const RiskManagementConditions = () => {
   const descriptionLocationConditions =
     "Promedio de Porcentaje de Cumplimiento de de Gestion del Riesgo Agrupado por Municipio";
   const { datasRiskManagementConditions } = useContext(principalContext);
-
+  const descriptionModal =
+    "Instituciones con porcentaje de cumplimiento de gestion de riesgo mas bajos";
   return (
     <>
       <div className="graphicResponsive">
         <GraphicBarHorizontal
           datasGraphic={datasRiskManagementConditions}
           descriptionGraphic={descriptionLocationConditions}
+          descriptionModalGraphic={descriptionModal}
           titleGraphic={titleLocationConditions}
           colorGraphic={colorGraphicBlue}
           isModal={false}

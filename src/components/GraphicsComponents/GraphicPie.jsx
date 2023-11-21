@@ -44,6 +44,7 @@ function GraphicPie({ titleGraphic, descriptionGraphic, datasGraphic }) {
         name: "Categoria",
         colorByPoint: true,
         data: datasGraphic,
+        cursor: "pointer",
       },
     ],
   };

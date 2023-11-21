@@ -6,7 +6,6 @@ const TypeSanitaryConcept = () => {
   const titleTypeConceptSanitary = "Tipo de concepto sanitario";
   const descriptionTypeConceptSanitary =
     "Porcentaje de Instituciones Agrupadas por Tipo de concepto sanitario";
-
   const { dataTypeConceptSanitary } = useContext(principalContext);
 
   return (

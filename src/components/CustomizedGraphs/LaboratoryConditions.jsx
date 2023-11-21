@@ -8,16 +8,16 @@ const LaboratoryConditions = () => {
   const titleLaboratoryConditions = "Condiciones de Laboratorios por Municipio";
   const descriptionLaboratoryConditions =
     "Promedio de Porcentaje de Cumplimiento de Condiciones de Laboratorios Agrupado por Municipio";
-
+  const descriptionModal =
+    "Instituciones con porcentaje de cumplimiento de condiciones de laboratorios mas bajos";
   const { datasLaboratoryConditions } = useContext(principalContext);
-  const { stateModalGraphic, changeStateModal, cityModal } =
-    useContext(principalContext);
   return (
     <>
       <div className="graphicResponsive">
         <GraphicBarHorizontal
           titleGraphic={titleLaboratoryConditions}
           descriptionGraphic={descriptionLaboratoryConditions}
+          descriptionModalGraphic={descriptionModal}
           datasGraphic={datasLaboratoryConditions}
           colorGraphic={colorGraphicBlue}
           isModal={false}

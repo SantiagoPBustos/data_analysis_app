@@ -11,6 +11,7 @@ function GraphicBarVertical({
   titleGraphic,
   datasGraphic,
   descriptionGraphic,
+  descriptionModalGraphic,
   colorGraphic = [],
   isModal,
 }) {
@@ -86,7 +87,7 @@ function GraphicBarVertical({
                     console.log(response);
                     if (response.status === 200) {
                       handleCityModal(this.name);
-                      handleDescriptionModal(descriptionGraphic);
+                      handleDescriptionModal(descriptionModalGraphic);
                       handleDataModal(response.data);
                       changeStateModal(true);
                     }

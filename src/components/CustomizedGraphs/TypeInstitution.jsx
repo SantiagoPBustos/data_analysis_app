@@ -17,10 +17,9 @@ const TypeInstitution = () => {
           descriptionGraphic={descriptionTypeInstitution}
           datasGraphic={datasTypeInstitutions}
           colorGraphic={colorGraphicGreen}
-          isModal={false}
+          isModal={true}
         />
       </div>
-      <ModalGraphic />
     </>
   );
 };
