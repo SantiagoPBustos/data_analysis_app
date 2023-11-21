@@ -10,8 +10,7 @@ const WorstMunicipalitiesPercentage = () => {
     "Promedio de Porcentaje de Cumplimiento Agrupado por Municipio";
   const descriptionModal =
     "Peores Promedios de Porcentaje de Cumplimiento Total de Acta IVC";
-  const { stateModalGraphic, changeStateModal, cityModal } =
-    useContext(principalContext);
+
   const { datasWorstMunicipalities } = useContext(principalContext);
 
   return (
@@ -20,7 +19,7 @@ const WorstMunicipalitiesPercentage = () => {
         <GraphicBarVertical
           titleGraphic={titleWorstMunicipalities}
           descriptionGraphic={descriptionWorstMunicipalities}
-          dataGraphic={datasWorstMunicipalities}
+          datasGraphic={datasWorstMunicipalities}
           colorGraphic={colorGraphicBlue}
           isModal={false}
         />

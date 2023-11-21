@@ -14,7 +14,7 @@ const TypeSanitaryConcept = () => {
       <GraphicPie
         titleGraphic={titleTypeConceptSanitary}
         descriptionGraphic={descriptionTypeConceptSanitary}
-        dataGraphic={dataTypeConceptSanitary}
+        datasGraphic={dataTypeConceptSanitary}
       />
     </div>
   );

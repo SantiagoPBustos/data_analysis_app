@@ -4,7 +4,7 @@ import HighchartsReact from "highcharts-react-official";
 import exporting from "highcharts/modules/exporting";
 import accessibility from "highcharts/modules/accessibility";
 
-function GraphicPie({ titleGraphic, descriptionGraphic, dataGraphic }) {
+function GraphicPie({ titleGraphic, descriptionGraphic, datasGraphic }) {
   useEffect(() => {
     accessibility(Highcharts);
     exporting(Highcharts);
@@ -43,7 +43,7 @@ function GraphicPie({ titleGraphic, descriptionGraphic, dataGraphic }) {
       {
         name: "Categoria",
         colorByPoint: true,
-        data: dataGraphic,
+        data: datasGraphic,
       },
     ],
   };

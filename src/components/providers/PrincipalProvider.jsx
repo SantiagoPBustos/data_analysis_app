@@ -5,7 +5,7 @@ const PrincipalProvider = ({ children }) => {
   const [totalData, setTotalData] = useState(null);
   const [cityModal, setCityModal] = useState(null);
   const [descriptionModal, setDescriptionModal] = useState(null);
-  const [dataModal, setDataModal] = useState(null);
+  const [dataModal, setDataModal] = useState("");
   const [totalInstitutions, setTotalInstitutions] = useState("");
   const [educationInstitutions, setEducationInstitutions] = useState("");
   const [totalChilhood, setTotalChilhood] = useState("");
@@ -31,6 +31,14 @@ const PrincipalProvider = ({ children }) => {
 
   const handleCityModal = (city) => {
     setCityModal(city);
+  };
+
+  const handleDataModal = (data) => {
+    setDataModal(data);
+  };
+
+  const handleDescriptionModal = (description) => {
+    setDescriptionModal(description);
   };
 
   const changeStateModal = (value) => {
@@ -101,9 +109,9 @@ const PrincipalProvider = ({ children }) => {
       value={{
         totalData,
         descriptionModal,
-        setDescriptionModal,
+        handleDescriptionModal,
         dataModal,
-        setDataModal,
+        handleDataModal,
         stateModalGraphic,
         datasConditionsOfSanitation,
         datasLaboratoryConditions,

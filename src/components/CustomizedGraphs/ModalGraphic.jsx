@@ -4,15 +4,20 @@ import { principalContext } from "../../context/principalContext";
 import Modal from "../GraphicsComponents/Modal";
 
 const ModalGraphic = () => {
-  const { stateModalGraphic, changeStateModal, cityModal, descriptionModal, dataModal } =
-    useContext(principalContext);
+  const {
+    stateModalGraphic,
+    changeStateModal,
+    cityModal,
+    dataModal,
+    descriptionModal,
+  } = useContext(principalContext);
 
   return (
     <Modal state={stateModalGraphic} changeState={changeStateModal}>
       <GraphicBarHorizontal
         titleGraphic={cityModal}
         descriptionGraphic={descriptionModal}
-        dataGraphic={dataModal}
+        datasGraphic={dataModal}
         isModal={true}
       />
     </Modal>

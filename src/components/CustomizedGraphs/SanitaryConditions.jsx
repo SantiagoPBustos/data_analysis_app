@@ -8,8 +8,7 @@ const SanitaryConditions = () => {
   const titleSanitaryConditions = "Condiciones Sanitarias por Municipio";
   const descriptionSanitaryConditions =
     "Promedio de Porcentaje de Cumplimiento de Condiciones Sanitarias Agrupado por Municipio";
-  const { stateModalGraphic, changeStateModal, cityModal } =
-    useContext(principalContext);
+
   const { datasSanitaryConditions } = useContext(principalContext);
 
   return (
@@ -18,7 +17,7 @@ const SanitaryConditions = () => {
         <GraphicBarVertical
           titleGraphic={titleSanitaryConditions}
           descriptionGraphic={descriptionSanitaryConditions}
-          dataGraphic={datasSanitaryConditions}
+          datasGraphic={datasSanitaryConditions}
           colorGraphic={colorGraphicGreen}
           isModal={false}
         />

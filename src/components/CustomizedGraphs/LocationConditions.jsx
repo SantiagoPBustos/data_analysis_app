@@ -10,8 +10,7 @@ const LocationConditions = () => {
     "Promedio de Porcentaje de Cumplimiento de Condiciones Locativas Agrupado por Municipio";
 
   const { datasLocationConditions } = useContext(principalContext);
-  const { stateModalGraphic, changeStateModal, cityModal } =
-    useContext(principalContext);
+
   return (
     <>
       <div className="graphicResponsive">

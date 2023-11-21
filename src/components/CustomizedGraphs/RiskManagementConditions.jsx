@@ -9,9 +9,8 @@ const RiskManagementConditions = () => {
     "Condiciones de Gestion del Riesgo por Municipio";
   const descriptionLocationConditions =
     "Promedio de Porcentaje de Cumplimiento de de Gestion del Riesgo Agrupado por Municipio";
-  const { stateModalGraphic, changeStateModal, cityModal } =
-    useContext(principalContext);
   const { datasRiskManagementConditions } = useContext(principalContext);
+
   return (
     <>
       <div className="graphicResponsive">

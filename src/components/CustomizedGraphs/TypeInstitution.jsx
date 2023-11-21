@@ -9,8 +9,6 @@ const TypeInstitution = () => {
   const descriptionTypeInstitution =
     "Promedio de Porcentaje de Cumplimiento Agrupado por Tipo de Institucion";
   const { datasTypeInstitutions } = useContext(principalContext);
-  const { stateModalGraphic, changeStateModal, cityModal } =
-    useContext(principalContext);
   return (
     <>
       <div className="graphicResponsive">

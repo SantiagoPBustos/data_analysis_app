@@ -4,15 +4,24 @@ import HighchartsReact from "highcharts-react-official";
 import exporting from "highcharts/modules/exporting";
 import accessibility from "highcharts/modules/accessibility";
 import { principalContext } from "../../context/principalContext";
+import { environment } from "../../venv/venviroment.prod";
+import { httpRequest } from "../../services/HttpRequests";
 
 function GraphicBarVertical({
   titleGraphic,
-  dataGraphic,
+  datasGraphic,
   descriptionGraphic,
   colorGraphic = [],
   isModal,
 }) {
-  const { changeStateModal, handleCityModal } = useContext(principalContext);
+  const {
+    changeStateModal,
+    handleCityModal,
+    handleDataModal,
+    handleDescriptionModal,
+    totalData,
+    handleLoadingState,
+  } = useContext(principalContext);
   useEffect(() => {
     accessibility(Highcharts);
     exporting(Highcharts);
@@ -60,9 +69,30 @@ function GraphicBarVertical({
           events: {
             click: function () {
               if (!isModal) {
-                console.log(`Nombre: ${titleGraphic}`);
-                handleCityModal(this.name);
-                changeStateModal(true);
+                handleLoadingState(true);
+
+                const endpoint = `${environment.endpointProduction}dataInstitution/`;
+
+                const options = {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(totalData),
+                };
+
+                httpRequest(endpoint, options)
+                  .then((response) => {
+                    console.log(response);
+                    if (response.status === 200) {
+                      handleCityModal(this.name);
+                      handleDescriptionModal(descriptionGraphic);
+                      handleDataModal(response.data);
+                      changeStateModal(true);
+                    }
+                    handleLoadingState(false);
+                  })
+                  .catch((err) => err);
               }
             },
           },
@@ -81,7 +111,7 @@ function GraphicBarVertical({
     series: [
       {
         type: "bar",
-        data: dataGraphic,
+        data: datasGraphic,
         cursor: "pointer",
       },
     ],

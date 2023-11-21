@@ -18,7 +18,7 @@ const ConditionsOfSanitation = () => {
         <GraphicBarVertical
           titleGraphic={titleConditionsOfSanitation}
           descriptionGraphic={descriptionConditionsOfSanitation}
-          dataGraphic={datasConditionsOfSanitation}
+          datasGraphic={datasConditionsOfSanitation}
           colorGraphic={colorGraphicGreen}
           isModal={false}
         />

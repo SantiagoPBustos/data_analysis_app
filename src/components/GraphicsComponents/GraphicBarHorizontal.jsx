@@ -5,6 +5,8 @@ import exporting from "highcharts/modules/exporting";
 import accessibility from "highcharts/modules/accessibility";
 import { principalContext } from "../../context/principalContext";
 import { colorGraphicBlue } from "../../utils/Utilities";
+import { environment } from "../../venv/venviroment.prod";
+import { httpRequest } from "../../services/HttpRequests";
 
 exporting(Highcharts);
 accessibility(Highcharts);
@@ -12,16 +14,23 @@ accessibility(Highcharts);
 function GraphicBarHorizontal({
   titleGraphic,
   descriptionGraphic,
-  datasGraphic,
-  colorGraphic = { colorGraphicBlue },
+  datasGraphic = [],
+  colorGraphic = colorGraphicBlue,
   isModal,
 }) {
-  const { changeStateModal, handleCityModal } = useContext(principalContext);
+  const {
+    changeStateModal,
+    handleCityModal,
+    handleDataModal,
+    handleDescriptionModal,
+    totalData,
+    handleLoadingState,
+  } = useContext(principalContext);
 
   useEffect(() => {
     accessibility(Highcharts);
     exporting(Highcharts);
-  }, []);
+  });
 
   const options = {
     colors: colorGraphic,
@@ -59,13 +68,31 @@ function GraphicBarHorizontal({
           events: {
             click: function () {
               if (!isModal) {
-                console.log(`Nombre: ${titleGraphic}`);
-                handleCityModal(this.name);
-                changeStateModal(true);
-              }
+                handleLoadingState(true);
 
-              // Debes generar el gráfico category aquí
-              // Puedes utilizar el estado de tu componente o una función para renderizarlo.
+                const endpoint = `${environment.endpointProduction}dataInstitution/`;
+
+                const options = {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(totalData),
+                };
+
+                httpRequest(endpoint, options)
+                  .then((response) => {
+                    console.log(response);
+                    if (response.status === 200) {
+                      handleCityModal(this.name);
+                      handleDescriptionModal(descriptionGraphic);
+                      handleDataModal(response.data);
+                      changeStateModal(true);
+                    }
+                    handleLoadingState(false);
+                  })
+                  .catch((err) => err);
+              }
             },
           },
         },
