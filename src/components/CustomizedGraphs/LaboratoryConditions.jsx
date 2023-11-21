@@ -9,7 +9,7 @@ const LaboratoryConditions = () => {
   const descriptionLaboratoryConditions =
     "Promedio de Porcentaje de Cumplimiento de Condiciones de Laboratorios Agrupado por Municipio";
   const descriptionModal =
-    "Instituciones con porcentaje de cumplimiento de condiciones de laboratorios mas bajos";
+    "INSTITUCIONES CON PORCENTAJE DE CUMPLIMIENTO DE CONDICIONES DE LABORATORIOS MÁS BAJOS";
   const { datasLaboratoryConditions } = useContext(principalContext);
   return (
     <>

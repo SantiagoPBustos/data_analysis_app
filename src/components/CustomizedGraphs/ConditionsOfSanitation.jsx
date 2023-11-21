@@ -11,7 +11,7 @@ const ConditionsOfSanitation = () => {
     "Promedio de Porcentaje de Cumplimiento de Condiciones de Saneamiento Agrupado por Municipio";
   const { datasConditionsOfSanitation } = useContext(principalContext);
   const descriptionModal =
-    "Instituciones con porcentaje de cumplimiento de condiciones de saneamiento mas bajos";
+    "INSTITUCIONES CON PORCENTAJE DE CUMPLIMIENTO DE CONDICIONES DE SANEAMIENTO MÁS BAJOS";
   return (
     <>
       <div className="graphicResponsive">

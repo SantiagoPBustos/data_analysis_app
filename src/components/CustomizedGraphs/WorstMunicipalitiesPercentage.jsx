@@ -9,7 +9,7 @@ const WorstMunicipalitiesPercentage = () => {
   const descriptionWorstMunicipalities =
     "Promedio de Porcentaje de Cumplimiento Agrupado por Municipio";
   const descriptionModal =
-    "Instituciones con porcentaje de cumplimiento total de Actas de IVC mas bajos";
+    "INSTITUCIONES CON PORCENTAJE DE CUMPLIMIENTO TOTAL DE ACTAS DE IVC MÁS BAJOS";
   const { datasWorstMunicipalities } = useContext(principalContext);
 
   return (

@@ -10,7 +10,7 @@ const SanitaryConditions = () => {
     "Promedio de Porcentaje de Cumplimiento de Condiciones Sanitarias Agrupado por Municipio";
   const { datasSanitaryConditions } = useContext(principalContext);
   const descriptionModal =
-    "Instituciones con porcentaje de cumplimiento de condiciones sanitarias mas bajos";
+    "INSTITUCIONES CON PORCENTAJE DE CUMPLIMIENTO DE CONDICIONES SANITARIAS MÁS BAJOS";
   return (
     <>
       <div className="graphicResponsive">

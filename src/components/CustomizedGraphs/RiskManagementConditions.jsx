@@ -11,7 +11,7 @@ const RiskManagementConditions = () => {
     "Promedio de Porcentaje de Cumplimiento de de Gestion del Riesgo Agrupado por Municipio";
   const { datasRiskManagementConditions } = useContext(principalContext);
   const descriptionModal =
-    "Instituciones con porcentaje de cumplimiento de gestion de riesgo mas bajos";
+    "INSTITUCIONES CON PORCENTAJE DE CUMPLIMIENTO DE GESTIÓN DE RIESGO MÁS BAJOS";
   return (
     <>
       <div className="graphicResponsive">

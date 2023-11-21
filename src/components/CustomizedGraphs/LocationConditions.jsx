@@ -10,7 +10,7 @@ const LocationConditions = () => {
     "Promedio de Porcentaje de Cumplimiento de Condiciones Locativas Agrupado por Municipio";
   const { datasLocationConditions } = useContext(principalContext);
   const descriptionModal =
-    "Instituciones con porcentaje de cumplimiento de condiciones locativas mas bajos";
+    "INSTITUCIONES CON PORCENTAJE DE CUMPLIMIENTO DE CONDICIONES LOCATIVAS MÁS BAJOS";
   return (
     <>
       <div className="graphicResponsive">
