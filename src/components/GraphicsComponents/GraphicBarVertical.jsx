@@ -71,15 +71,16 @@ function GraphicBarVertical({
             click: function () {
               if (!isModal) {
                 handleLoadingState(true);
-
                 const endpoint = `${environment.endpointProduction}dataInstitution/`;
-
                 const options = {
                   method: "POST",
                   headers: {
                     "Content-Type": "application/json",
                   },
-                  body: JSON.stringify(totalData),
+                  body: JSON.stringify({
+                    data: totalData,
+                    municipio: this.name,
+                  }),
                 };
 
                 httpRequest(endpoint, options)
@@ -88,7 +89,7 @@ function GraphicBarVertical({
                     if (response.status === 200) {
                       handleCityModal(this.name);
                       handleDescriptionModal(descriptionModalGraphic);
-                      handleDataModal(response.data);
+                      handleDataModal(response.reports);
                       changeStateModal(true);
                     }
                     handleLoadingState(false);

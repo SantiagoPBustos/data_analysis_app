@@ -88,7 +88,7 @@ function GraphicBarHorizontal({
                     if (response.status === 200) {
                       handleCityModal(this.name);
                       handleDescriptionModal(descriptionModalGraphic);
-                      handleDataModal(response.data);
+                      handleDataModal(response.reports);
                       changeStateModal(true);
                     }
                     handleLoadingState(false);
