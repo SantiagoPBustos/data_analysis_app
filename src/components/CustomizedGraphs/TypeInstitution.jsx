@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { principalContext } from "../../context/principalContext";
 import GraphicBarHorizontal from "../GraphicsComponents/GraphicBarHorizontal";
 import { colorGraphicGreen } from "../../utils/Utilities";
-import ModalGraphic from "./ModalGraphic";
 
 const TypeInstitution = () => {
   const titleTypeInstitution = "Tipo de Institucion";

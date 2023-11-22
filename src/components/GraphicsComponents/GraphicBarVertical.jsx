@@ -57,6 +57,8 @@ function GraphicBarVertical({
       tickPixelInterval: 50,
       title: {
         text: null,
+        min: 0,
+        max: 100,
       },
     },
     tooltip: {

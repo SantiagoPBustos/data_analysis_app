@@ -56,6 +56,8 @@ function GraphicBarHorizontal({
     },
     yAxis: {
       title: null,
+      min: 0,
+      max: 100,
     },
     legend: {
       enabled: false,

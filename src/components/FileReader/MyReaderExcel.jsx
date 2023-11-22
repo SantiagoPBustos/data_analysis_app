@@ -59,7 +59,6 @@ function MyReaderExcel() {
 
   const postData = (dataToSend) => {
     handleSaveData(dataToSend);
-    console.log(JSON.stringify(dataToSend));
     const endpoint = `${environment.endpointProduction}postData/`;
 
     const options = {
