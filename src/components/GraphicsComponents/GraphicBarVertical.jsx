@@ -51,14 +51,14 @@ function GraphicBarVertical({
     },
     xAxis: {
       type: "category",
+      min: 0,
+      max: 100,
     },
     yAxis: {
       opposite: false,
       tickPixelInterval: 50,
       title: {
         text: null,
-        min: 0,
-        max: 100,
       },
     },
     tooltip: {
