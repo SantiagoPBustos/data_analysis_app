@@ -70,6 +70,7 @@ function MyReaderExcel() {
     };
     httpRequest(endpoint, options)
       .then((response) => {
+        console.log(response);
         if (response.status === 200) {
           handleChangeInstitutions(response.total);
           handleEducationInstitutions(response.total_IE);
