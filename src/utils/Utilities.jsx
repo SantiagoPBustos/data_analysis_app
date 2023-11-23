@@ -54,6 +54,10 @@ export const colorGraphicBlue = [
   "#5474b7",
   "#5271b5",
   "#506eb3",
+  "#4d6cb1",
+  "#4b69ae",
+  "#4867ac",
+  "#4664aa",
 ];
 
 export const colorGraphicGreen = [
