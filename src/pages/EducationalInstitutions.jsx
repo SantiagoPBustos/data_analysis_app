@@ -13,7 +13,8 @@ import logo from "../assets/logo.png";
 import { useContext } from "react";
 
 export function Home() {
-  const { dataLoading } = useContext(principalContext);
+  const { dataLoading, datasLaboratoryConditions } =
+    useContext(principalContext);
 
   const handleReloadClick = () => {
     window.location.reload();
@@ -39,7 +40,7 @@ export function Home() {
           <TypeInstitution />
           <TypeSanitaryConcept />
           <LocationConditions />
-          <LaboratoryConditions />
+          {datasLaboratoryConditions != null ? <LaboratoryConditions /> : <></>}
           <SanitaryConditions />
           <ConditionsOfSanitation />
           <RiskManagementConditions />
