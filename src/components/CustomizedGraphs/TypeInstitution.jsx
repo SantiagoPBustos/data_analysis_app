@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { principalContext } from "../../context/principalContext";
 import GraphicBarHorizontal from "../GraphicsComponents/GraphicBarHorizontal";
-import { colorGraphicGreen } from "../../utils/Utilities";
+import { colorGraphicGreenReverse } from "../../utils/Utilities";
 
 const TypeInstitution = () => {
   const titleTypeInstitution = "Tipo de Institucion";
@@ -15,7 +15,7 @@ const TypeInstitution = () => {
           titleGraphic={titleTypeInstitution}
           descriptionGraphic={descriptionTypeInstitution}
           datasGraphic={datasTypeInstitutions}
-          colorGraphic={colorGraphicGreen}
+          colorGraphic={colorGraphicGreenReverse}
           isModal={true}
         />
       </div>
