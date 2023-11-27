@@ -82,6 +82,7 @@ function GraphicBarVertical({
                   body: JSON.stringify({
                     data: totalData,
                     municipio: this.name,
+                    component: descriptionModalGraphic,
                   }),
                 };
 
