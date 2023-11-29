@@ -102,6 +102,15 @@ function GraphicBarHorizontal({
           },
         },
       },
+      dataLabels: {
+        enabled: true,
+        inside: true,
+        color: "white",
+        style: {
+          fontSize: "12px",
+          textOutline: "0px contrast",
+        },
+      },
     },
     series: [
       {
@@ -110,15 +119,6 @@ function GraphicBarHorizontal({
         cursor: "pointer",
       },
     ],
-    dataLabels: {
-      enabled: true,
-      inside: true,
-      color: "white",
-      style: {
-        fontSize: "12px",
-        textOutline: "0px contrast",
-      },
-    },
   };
 
   return (
