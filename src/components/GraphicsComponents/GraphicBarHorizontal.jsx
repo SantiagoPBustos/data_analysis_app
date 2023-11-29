@@ -102,6 +102,9 @@ function GraphicBarHorizontal({
           },
         },
       },
+      dataLabels: {
+        enabled: true,
+      },
     },
     series: [
       {
