@@ -102,21 +102,21 @@ function GraphicBarHorizontal({
           },
         },
       },
-      dataLabels: {
-        enabled: true,
-        inside: true,
-        color: "white",
-        style: {
-          fontSize: "12px",
-          textOutline: "0px contrast",
-        },
-      },
     },
     series: [
       {
         colorByPoint: true,
         data: datasGraphic,
         cursor: "pointer",
+        dataLabels: {
+          enabled: true,
+          inside: true,
+          color: "white",
+          style: {
+            fontSize: "12px",
+            textOutline: "0px contrast",
+          },
+        },
       },
     ],
   };
