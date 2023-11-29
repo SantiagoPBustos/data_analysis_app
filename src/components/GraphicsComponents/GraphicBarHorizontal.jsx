@@ -1,6 +1,8 @@
 import React, { useContext, useEffect } from "react";
 import Highcharts from "highcharts";
-import {HighchartsReact, exporting} from "highcharts-react-official";
+import HighchartsReact from "highcharts-react-official";
+import exporting from "highcharts/modules/exporting";
+import accessibility from "highcharts/modules/accessibility";
 import { principalContext } from "../../context/principalContext";
 import { colorGraphicBlue } from "../../utils/Utilities";
 import { environment } from "../../venv/venviroment.prod";
