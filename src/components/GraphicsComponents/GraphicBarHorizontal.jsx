@@ -111,7 +111,7 @@ function GraphicBarHorizontal({
         dataLabels: {
           enabled: true,
           inside: true,
-          color: "white",
+          color: "black",
           style: {
             fontSize: "12px",
             textOutline: "0px contrast",
