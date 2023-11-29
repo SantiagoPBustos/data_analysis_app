@@ -60,7 +60,7 @@ function GraphicBarHorizontal({
       max: 100,
     },
     legend: {
-      enabled: true,
+      enabled: false,
     },
     tooltip: {
       pointFormat: "<b>{point.y:.1f}%</b>",
@@ -110,6 +110,15 @@ function GraphicBarHorizontal({
         cursor: "pointer",
       },
     ],
+    dataLabels: {
+      enabled: true,
+      inside: true,
+      color: "white",
+      style: {
+        fontSize: "12px",
+        textOutline: "0px contrast",
+      },
+    },
   };
 
   return (
