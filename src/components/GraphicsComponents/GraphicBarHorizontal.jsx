@@ -110,7 +110,6 @@ function GraphicBarHorizontal({
         cursor: "pointer",
         dataLabels: {
           enabled: true,
-          inside: true,
           color: "black",
           style: {
             fontSize: "12px",
