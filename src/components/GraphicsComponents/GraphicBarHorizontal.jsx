@@ -29,6 +29,7 @@ function GraphicBarHorizontal({
   } = useContext(principalContext);
 
   useEffect(() => {
+    accessibility(Highcharts);
     exporting(Highcharts);
   });
 
