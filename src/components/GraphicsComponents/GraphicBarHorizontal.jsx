@@ -1,8 +1,6 @@
 import React, { useContext, useEffect } from "react";
-import Highcharts from "highcharts";
-import HighchartsReact from "highcharts-react-official";
-import exporting from "highcharts/modules/exporting";
-import accessibility from "highcharts/modules/accessibility";
+import { Highcharts, exporting } from "highcharts";
+import { HighchartsReact } from "highcharts-react-official";
 import { principalContext } from "../../context/principalContext";
 import { colorGraphicBlue } from "../../utils/Utilities";
 import { environment } from "../../venv/venviroment.prod";
@@ -29,7 +27,6 @@ function GraphicBarHorizontal({
   } = useContext(principalContext);
 
   useEffect(() => {
-    accessibility(Highcharts);
     exporting(Highcharts);
   });
 
