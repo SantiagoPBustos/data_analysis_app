@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
-import { Highcharts, exporting } from "highcharts";
-import { HighchartsReact } from "highcharts-react-official";
+import Highcharts from "highcharts";
+import {HighchartsReact, exporting} from "highcharts-react-official";
 import { principalContext } from "../../context/principalContext";
 import { colorGraphicBlue } from "../../utils/Utilities";
 import { environment } from "../../venv/venviroment.prod";
