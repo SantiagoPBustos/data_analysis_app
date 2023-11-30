@@ -30,7 +30,7 @@ function GraphicBarVertical({
   const options = {
     colors: colorGraphic,
     chart: {
-      type: "column",
+      type: "bar",
       animation: {
         duration: 500,
       },
