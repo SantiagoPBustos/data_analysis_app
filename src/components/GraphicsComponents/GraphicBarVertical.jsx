@@ -34,7 +34,7 @@ function GraphicBarVertical({
       scrollablePlotArea: {
         minHeight: 3000,
       },
-      scrollPositionY: 1,
+      scrollPositionY: 0,
       animation: {
         duration: 500,
       },
