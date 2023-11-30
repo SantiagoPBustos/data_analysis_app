@@ -61,7 +61,7 @@ function GraphicBarVertical({
       opposite: false,
       tickPixelInterval: 50,
       min: 0,
-      max: 100,
+      max: 1200,
       title: {
         text: null,
       },
