@@ -51,18 +51,18 @@ function GraphicBarVertical({
     xAxis: {
       type: "category",
       min: 0,
-      max: 2000,
-      scrollbar: {
-        enabled: true,
-      },
+      max: 100,
     },
     yAxis: {
       opposite: false,
       tickPixelInterval: 50,
       min: 0,
-      max: 100,
+      max: 3500,
       title: {
         text: null,
+      },
+      scrollbar: {
+        enabled: true,
       },
     },
     tooltip: {
