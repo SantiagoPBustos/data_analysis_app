@@ -40,6 +40,7 @@ function GraphicBarHorizontal({
       scrollablePlotArea: {
         minWidth: 4000,
         scrollPositionX: 0,
+        opacity: 1,
       },
       animation: {
         duration: 500,

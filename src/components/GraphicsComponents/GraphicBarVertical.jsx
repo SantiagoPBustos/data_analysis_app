@@ -30,9 +30,10 @@ function GraphicBarVertical({
   const options = {
     colors: colorGraphic,
     chart: {
-      type: "column",      
+      type: "column",
       scrollablePlotArea: {
         minHeight: 3000,
+        opacity: 1,
       },
       scrollPositionY: 1,
       animation: {
@@ -51,6 +52,9 @@ function GraphicBarVertical({
       enabled: false,
     },
     legend: {
+      enabled: false,
+    },
+    credits: {
       enabled: false,
     },
     xAxis: {
