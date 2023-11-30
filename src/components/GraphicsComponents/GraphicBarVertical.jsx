@@ -32,7 +32,7 @@ function GraphicBarVertical({
     chart: {
       type: "column",      
       scrollablePlotArea: {
-        minHeight: 2000,
+        minHeight: 3000,
       },
       scrollPositionY: 1,
       animation: {
