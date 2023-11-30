@@ -66,6 +66,9 @@ function GraphicBarHorizontal({
       min: 0,
       max: 100,
     },
+    credits: {
+      enabled: false,
+    },
     legend: {
       enabled: false,
     },

@@ -50,19 +50,22 @@ function GraphicBarVertical({
     },
     xAxis: {
       type: "category",
-      min: 0,
-      max: 100,
-    },
-    yAxis: {
-      opposite: false,
-      tickPixelInterval: 50,
-      min: 0,
-      max: 3500,
       title: {
         text: null,
       },
+      min: 0,
+      max: 4,
       scrollbar: {
         enabled: true,
+      },
+      tickLength: 0,
+    },
+    yAxis: {
+      min: 0,
+      max: 1200,
+      title: {
+        text: "Votes",
+        align: "high",
       },
     },
     tooltip: {
@@ -116,6 +119,9 @@ function GraphicBarVertical({
           enabled: true,
         },
       },
+    },
+    credits: {
+      enabled: false,
     },
     series: [
       {
