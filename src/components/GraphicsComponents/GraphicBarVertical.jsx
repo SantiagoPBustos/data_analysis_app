@@ -51,7 +51,7 @@ function GraphicBarVertical({
     xAxis: {
       type: "category",
       min: 0,
-      max: 10,
+      max: 2000,
       scrollbar: {
         enabled: true,
       },
@@ -60,7 +60,7 @@ function GraphicBarVertical({
       opposite: false,
       tickPixelInterval: 50,
       min: 0,
-      max: 1200,
+      max: 100,
       title: {
         text: null,
       },
