@@ -30,7 +30,11 @@ function GraphicBarVertical({
   const options = {
     colors: colorGraphic,
     chart: {
-      type: "column",
+      type: "column",      
+      scrollablePlotArea: {
+        minWidth: 700,
+        scrollPositionX: 1,
+      },
       animation: {
         duration: 500,
       },

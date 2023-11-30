@@ -37,6 +37,13 @@ function GraphicBarHorizontal({
     colors: colorGraphic,
     chart: {
       type: "column",
+      scrollablePlotArea: {
+        minWidth: 700,
+        scrollPositionX: 1,
+      },
+      animation: {
+        duration: 500,
+      },
     },
     title: {
       text: `${titleGraphic}`,
