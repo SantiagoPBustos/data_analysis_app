@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
-import excelLab from "../../files/Formato_Cargue_Instituciones_Educativas_con_Laboratorio.xlsx";
-import excel from "../../files/Formato_Cargue_Instituciones_sin_Laboratorio.xlsx";
+import excelLab from "../../files/BD_Cargue_Instituciones_Educativas_con_Laboratorio.xlsx";
+import excel from "../../files/BD_Cargue_Instituciones_sin_Laboratorio.xlsx";
 import { arrayToJsonData, isFileValid } from "../../utils/Utilities";
 import { httpRequest } from "../../services/HttpRequests";
 import Modal from "../GraphicsComponents/Modal";
