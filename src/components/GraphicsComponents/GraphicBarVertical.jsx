@@ -30,10 +30,14 @@ function GraphicBarVertical({
   const options = {
     colors: colorGraphic,
     chart: {
-      type: "bar",
+      type: "column",      
+      scrollablePlotArea: {
+        minWidth: 2000,
+      },
       animation: {
         duration: 500,
       },
+      marginRight: 60,
     },
     title: {
       text: `${titleGraphic}`,
@@ -50,22 +54,14 @@ function GraphicBarVertical({
     },
     xAxis: {
       type: "category",
-      title: {
-        text: null,
-      },
-      min: 0,
-      max: 4,
-      scrollbar: {
-        enabled: true,
-      },
-      tickLength: 0,
     },
     yAxis: {
+      opposite: false,
+      tickPixelInterval: 50,
       min: 0,
-      max: 1200,
+      max: 100,
       title: {
-        text: "Votes",
-        align: "high",
+        text: null,
       },
     },
     tooltip: {
@@ -119,9 +115,6 @@ function GraphicBarVertical({
           enabled: true,
         },
       },
-    },
-    credits: {
-      enabled: false,
     },
     series: [
       {
