@@ -19,6 +19,7 @@ const ModalGraphic = () => {
         descriptionGraphic={descriptionModal}
         datasGraphic={dataModal}
         isModal={true}
+        height={1000}
       />
     </Modal>
   );

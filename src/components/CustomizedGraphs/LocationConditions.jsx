@@ -21,6 +21,7 @@ const LocationConditions = () => {
           titleGraphic={titleLocationConditions}
           colorGraphic={colorGraphicBlue}
           isModal={false}
+          height={4000}
         ></GraphicBarHorizontal>
       </div>
       <ModalGraphic />

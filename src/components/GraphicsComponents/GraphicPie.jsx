@@ -21,6 +21,9 @@ function GraphicPie({ titleGraphic, descriptionGraphic, datasGraphic }) {
       text: `${descriptionGraphic}`,
       align: "center",
     },
+    credits: {
+      enabled: false,
+    },
     accessibility: {
       announceNewData: { enabled: true },
       point: { valueSuffix: "%" },

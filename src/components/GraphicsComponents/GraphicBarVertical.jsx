@@ -39,7 +39,8 @@ function GraphicBarVertical({
       animation: {
         duration: 500,
       },
-      marginRight: 60,
+      marginRight: 50,
+      spacingRight: 20,
     },
     title: {
       text: `${titleGraphic}`,

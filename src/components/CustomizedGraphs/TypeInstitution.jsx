@@ -17,6 +17,7 @@ const TypeInstitution = () => {
           datasGraphic={datasTypeInstitutions}
           colorGraphic={colorGraphicGreenReverse}
           isModal={true}
+          height={4000}
         />
       </div>
     </>

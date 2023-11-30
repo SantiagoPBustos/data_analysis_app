@@ -18,6 +18,7 @@ function GraphicBarHorizontal({
   datasGraphic = [],
   colorGraphic = colorGraphicBlue,
   isModal,
+  height,
 }) {
   const {
     changeStateModal,
@@ -38,10 +39,11 @@ function GraphicBarHorizontal({
     chart: {
       type: "column",
       scrollablePlotArea: {
-        minWidth: 4000,
+        minWidth: height,
         scrollPositionX: 0,
-        opacity: 1,
+        opacity: 0,
       },
+      spacingBottom: 30,
       animation: {
         duration: 500,
       },

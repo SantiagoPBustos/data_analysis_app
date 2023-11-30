@@ -21,6 +21,7 @@ const LaboratoryConditions = () => {
           datasGraphic={datasLaboratoryConditions}
           colorGraphic={colorGraphicBlue}
           isModal={false}
+          height={4000}
         ></GraphicBarHorizontal>
       </div>
       <ModalGraphic />
