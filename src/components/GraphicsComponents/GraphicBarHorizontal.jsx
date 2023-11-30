@@ -38,7 +38,7 @@ function GraphicBarHorizontal({
     chart: {
       type: "column",
       scrollablePlotArea: {
-        minWidth: 200,
+        minWidth: 2000,
         scrollPositionX: 1,
       },
       animation: {
