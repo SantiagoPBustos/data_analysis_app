@@ -39,7 +39,7 @@ function GraphicBarHorizontal({
       type: "column",
       scrollablePlotArea: {
         minWidth: 4000,
-        scrollPositionX: 1,
+        scrollPositionX: 0,
       },
       animation: {
         duration: 500,
