@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { principalContext } from "../../context/principalContext";
-import GraphicBarHorizontal from "../GraphicsComponents/GraphicBarHorizontal";
+import GraphicBarHorizontal from "../graphics/GraphicBarHorizontal";
 import { colorGraphicGreenReverse } from "../../utils/Utilities";
 
 const TypeInstitution = () => {

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import GraphicBarHorizontal from "../GraphicsComponents/GraphicBarHorizontal";
+import GraphicBarHorizontal from "../graphics/GraphicBarHorizontal";
 import { principalContext } from "../../context/principalContext";
-import Modal from "../GraphicsComponents/Modal";
+import Modal from "../graphics/Modal";
 
 const ModalGraphic = () => {
   const {

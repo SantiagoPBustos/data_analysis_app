@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import GraphicPie from "../GraphicsComponents/GraphicPie";
+import GraphicPie from "../graphics/GraphicPie";
 import { principalContext } from "../../context/principalContext";
 
 const TypeSanitaryConcept = () => {

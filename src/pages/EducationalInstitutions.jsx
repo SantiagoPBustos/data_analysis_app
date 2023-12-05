@@ -1,16 +1,17 @@
-import TypeSanitaryConcept from "../components/CustomizedGraphs/TypeSanitaryConcept";
-import WorstMunicipalitiesPercentage from "../components/CustomizedGraphs/WorstMunicipalitiesPercentage";
-import GeneralReports from "../components/CustomizedGraphs/GeneralReports";
-import TypeInstitution from "../components/CustomizedGraphs/TypeInstitution";
-import LocationConditions from "../components/CustomizedGraphs/LocationConditions";
-import SanitaryConditions from "../components/CustomizedGraphs/SanitaryConditions";
-import ConditionsOfSanitation from "../components/CustomizedGraphs/ConditionsOfSanitation";
-import RiskManagementConditions from "../components/CustomizedGraphs/RiskManagementConditions";
-import LaboratoryConditions from "../components/CustomizedGraphs/LaboratoryConditions";
-import MyReaderExcel from "../components/FileReader/MyReaderExcel";
+import TypeSanitaryConcept from "../components/customizedGraphs/TypeSanitaryConcept";
+import WorstMunicipalitiesPercentage from "../components/customizedGraphs/WorstMunicipalitiesPercentage";
+import GeneralReports from "../components/customizedGraphs/GeneralReports";
+import TypeInstitution from "../components/customizedGraphs/TypeInstitution";
+import LocationConditions from "../components/customizedGraphs/LocationConditions";
+import SanitaryConditions from "../components/customizedGraphs/SanitaryConditions";
+import ConditionsOfSanitation from "../components/customizedGraphs/ConditionsOfSanitation";
+import RiskManagementConditions from "../components/customizedGraphs/RiskManagementConditions";
+import LaboratoryConditions from "../components/customizedGraphs/LaboratoryConditions";
+import MyReaderExcel from "../components/fileHandler/MyReaderExcel";
 import { principalContext } from "../context/principalContext";
 import logo from "../assets/logo.png";
 import { useContext } from "react";
+import ExportExcel from "../components/fileHandler/ExportExcel";
 
 export function Home() {
   const { dataLoading, datasLaboratoryConditions } =
@@ -32,6 +33,7 @@ export function Home() {
       {!dataLoading ? (
         <div className="main-content">
           <h4>Cargue archivo para generacion de reportes</h4>
+          <ExportExcel></ExportExcel>
         </div>
       ) : (
         <div className="container-graphics">
