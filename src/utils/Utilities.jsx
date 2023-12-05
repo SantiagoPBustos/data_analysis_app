@@ -22,78 +22,32 @@ export function isFileValid(file) {
   return fileNames[fileNames.length - 1].toLowerCase();
 }
 
-export const colorGraphicBlue = [
-  "#97bdf5",
-  "#95baf3",
-  "#92b8f1",
-  "#90b5ee",
-  "#8db3ec",
-  "#8bb0ea",
-  "#89ade8",
-  "#86abe6",
-  "#84a8e3",
-  "#82a5e1",
-  "#7fa3df",
-  "#7da0dd",
-  "#7a9edb",
-  "#789bd8",
-  "#7698d6",
-  "#7396d4",
-  "#7193d2",
-  "#6f91d0",
-  "#6c8ecd",
-  "#6a8bcb",
-  "#6789c9",
-  "#6586c7",
-  "#6383c4",
-  "#6081c2",
-  "#5e7ec0",
-  "#5b7cbe",
-  "#5979bc",
-  "#5776b9",
-  "#5474b7",
-  "#5271b5",
-  "#506eb3",
-  "#4d6cb1",
-  "#4b69ae",
-  "#4867ac",
-  "#4664aa",
-];
+function generarRangoHexadecimal(inicial, final, cantidad) {
+  const inicioR = parseInt(inicial.slice(1, 3), 16);
+  const inicioG = parseInt(inicial.slice(3, 5), 16);
+  const inicioB = parseInt(inicial.slice(5), 16);
 
-export const colorGraphicGreen = [
-  "#c4dda2",
-  "#c0db9f",
-  "#bcd99c",
-  "#b9d799",
-  "#b5d596",
-  "#b1d393",
-  "#add190",
-  "#a9cf8d",
-  "#a6cd8a",
-  "#a2cb87",
-  "#9ec985",
-  "#9ac782",
-  "#97c57f",
-  "#93c37c",
-  "#8fc179",
-  "#8bbf76",
-  "#87bd73",
-  "#84bb70",
-  "#80b96d",
-  "#7cb76a",
-];
+  const finR = parseInt(final.slice(1, 3), 16);
+  const finG = parseInt(final.slice(3, 5), 16);
+  const finB = parseInt(final.slice(5), 16);
 
-export const colorGraphicGreenReverse = [
-  "#7CB76A",
-  "#88BD73",
-  "#94C47C",
-  "#A0CA85",
-  "#ACD08E",
-  "#B8D697",
-  "#C4DCA0",
-  "#D0E2A9",
-  "#DCE8B2",
-  "#E8EEBB",
-  "#F4F4C4",
-  "#F8F8CB",
-];
+  const pasoR = (finR - inicioR) / (cantidad - 1);
+  const pasoG = (finG - inicioG) / (cantidad - 1);
+  const pasoB = (finB - inicioB) / (cantidad - 1);
+
+  const resultados = [];
+  for (let i = 0; i < cantidad; i++) {
+    const nuevoR = Math.round(inicioR + i * pasoR);
+    const nuevoG = Math.round(inicioG + i * pasoG);
+    const nuevoB = Math.round(inicioB + i * pasoB);
+
+    const colorHex = `#${nuevoR.toString(16).padStart(2, '0')}${nuevoG.toString(16).padStart(2, '0')}${nuevoB.toString(16).padStart(2, '0')}`;
+    resultados.push(colorHex);
+  }
+
+  return resultados;
+}
+
+export const colorGraphicBlue = generarRangoHexadecimal("#97bdf5", "#3664aa", 150);
+export const colorGraphicGreen = generarRangoHexadecimal("#c4dda2", "#7cb76a", 150);
+export const colorGraphicGreenReverse = generarRangoHexadecimal("#7cb76a", "#c4dda2", 150);
