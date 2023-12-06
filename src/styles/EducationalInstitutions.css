@@ -85,6 +85,16 @@ body::-webkit-scrollbar-thumb {
     border-radius: 5px;
 }
 
+.btn-export-data {
+    display: flex;
+    margin: auto;
+    background-color: #64AE58;
+    color: white;
+    border: none;
+    padding: 7px 20px;
+    border-radius: 5px;
+}
+
 .btn-modal {
     display: inline-block;
     background-color: #64AE58;

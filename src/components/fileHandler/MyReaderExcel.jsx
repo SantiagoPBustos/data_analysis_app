@@ -46,7 +46,7 @@ function MyReaderExcel() {
         const workbook = XLSX.read(data, { type: "binary" });
         const sheetName = workbook.SheetNames[0];
         const sheet = workbook.Sheets[sheetName];
-        const excelData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+        const excelData = XLSX.utils.sheet_to_json(sheet, { header: 1 , raw: false});
         const headers = excelData[0];
         const values = excelData.slice(1);
         postData(arrayToJsonData(headers, values));

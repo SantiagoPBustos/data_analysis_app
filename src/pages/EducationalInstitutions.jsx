@@ -1,12 +1,12 @@
-import TypeSanitaryConcept from "../components/customizedReports/TypeSanitaryConcept";
-import WorstMunicipalitiesPercentage from "../components/customizedReports/WorstMunicipalitiesPercentage";
-import GeneralReports from "../components/customizedReports/GeneralReports";
-import TypeInstitution from "../components/customizedReports/TypeInstitution";
-import LocationConditions from "../components/customizedReports/LocationConditions";
-import SanitaryConditions from "../components/customizedReports/SanitaryConditions";
-import ConditionsOfSanitation from "../components/customizedReports/ConditionsOfSanitation";
-import RiskManagementConditions from "../components/customizedReports/RiskManagementConditions";
-import LaboratoryConditions from "../components/customizedReports/LaboratoryConditions";
+import TypeSanitaryConcept from "../components/customizedGraphs/TypeSanitaryConcept";
+import WorstMunicipalitiesPercentage from "../components/customizedGraphs/WorstMunicipalitiesPercentage";
+import GeneralReports from "../components/customizedGraphs/GeneralReports";
+import TypeInstitution from "../components/customizedGraphs/TypeInstitution";
+import LocationConditions from "../components/customizedGraphs/LocationConditions";
+import SanitaryConditions from "../components/customizedGraphs/SanitaryConditions";
+import ConditionsOfSanitation from "../components/customizedGraphs/ConditionsOfSanitation";
+import RiskManagementConditions from "../components/customizedGraphs/RiskManagementConditions";
+import LaboratoryConditions from "../components/customizedGraphs/LaboratoryConditions";
 import MyReaderExcel from "../components/fileHandler/MyReaderExcel";
 import { principalContext } from "../context/principalContext";
 import logo from "../assets/logo.png";
@@ -33,7 +33,6 @@ export function Home() {
       {!dataLoading ? (
         <div className="main-content">
           <h4>Cargue archivo para generacion de reportes</h4>
-          <ExportExcel></ExportExcel>
         </div>
       ) : (
         <div className="container-graphics">

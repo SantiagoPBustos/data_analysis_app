@@ -19,6 +19,7 @@ function GraphicBarVertical({
     changeStateModal,
     handleCityModal,
     handleDataModal,
+    handleReportsModal,
     handleDescriptionModal,
     totalData,
     handleLoadingState,
@@ -101,7 +102,8 @@ function GraphicBarVertical({
                     if (response.status === 200) {
                       handleCityModal(this.name);
                       handleDescriptionModal(descriptionModalGraphic);
-                      handleDataModal(response.reports);
+                      handleDataModal(response.data);
+                      handleReportsModal(response.reports);
                       changeStateModal(true);
                     }
                     handleLoadingState(false);
