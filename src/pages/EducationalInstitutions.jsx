@@ -11,7 +11,6 @@ import MyReaderExcel from "../components/fileHandler/MyReaderExcel";
 import { principalContext } from "../context/principalContext";
 import logo from "../assets/logo.png";
 import { useContext } from "react";
-import ExportExcel from "../components/fileHandler/ExportExcel";
 
 export function Home() {
   const { dataLoading, datasLaboratoryConditions } =
